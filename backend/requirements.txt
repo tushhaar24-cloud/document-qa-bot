@@ -1,0 +1,56 @@
+# Backend
+fastapi
+uvicorn[standard]
+python-multipart
+python-dotenv
+pydantic
+
+# LLM Integration
+groq
+openai
+langchain
+langchain-core
+langchain-openai
+langchain-community
+langchain-text-splitters
+
+# Local Embeddings
+langchain-huggingface
+sentence-transformers
+
+# PDF Processing
+pypdf
+pymupdf
+
+# Vector Database
+chromadb
+langchain-chroma
+
+# Hybrid Search
+rank-bm25
+
+# Reranking
+# Tested with 5.21.1; app/services/reranking.py uses the v2 client (AsyncClientV2.rerank).
+cohere>=5.20,<6
+langchain-cohere
+
+# RAG Evaluation
+# Tested with 0.3.1; evaluation/evaluate_rag.py uses the 0.3 metrics API.
+ragas>=0.3.1,<0.4
+datasets
+
+# Database (PostgreSQL for metadata, chat history and evaluation results; vectors stay in ChromaDB)
+# Tested with SQLAlchemy 2.1.6 and psycopg 3.3.8. Tables are created with: python -m app.db.cli init-db
+sqlalchemy>=2.0,<3
+psycopg[binary]>=3.2,<4
+
+# Utilities
+tiktoken
+httpx
+
+# Testing
+pytest
+pytest-asyncio
+
+# Frontend
+streamlit
